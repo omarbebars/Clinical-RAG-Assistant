@@ -46,3 +46,10 @@ b.  ChromaDB is queried to find the top 5 most relevant text chunks.
 c.  The question and these 5 chunks are sent as context to the Groq API.
 
 d.  The LLM's answer is streamed back to the Streamlit app instantly.
+
+# Demo
+![Image](https://github.com/user-attachments/assets/9d2860f2-d372-4f27-92e6-dd440e4e9be9)
+![Image](https://github.com/user-attachments/assets/ae6f1be3-b155-40c0-9d81-cdba61cf666a)
+
+# Full Video 
+https://github.com/user-attachments/assets/2a21bce4-c185-4d70-a6ee-ddfb26ab9915
