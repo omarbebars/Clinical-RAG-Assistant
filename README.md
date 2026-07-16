@@ -12,31 +12,31 @@ This project showcases the entire data lifecycle: from raw PDF extraction and cl
 
 This application was built using the following technologies:
 
-Frontend (UI): Streamlit (for the interactive chat interface)
+- Frontend (UI): Streamlit (for the interactive chat interface)
 
-LLM (Generation): Groq API (using llama-3.1-8b-instant for high-speed, streaming responses)
+- LLM (Generation): Groq API (using llama-3.1-8b-instant for high-speed, streaming responses)
 
-Vector Database (Retrieval): ChromaDB (for efficient, local vector storage and similarity search)
+- Vector Database (Retrieval): ChromaDB (for efficient, local vector storage and similarity search)
 
-Embedding Model: SentenceTransformers (all-MiniLM-L6-v2 to convert text into vector embeddings)
+- Embedding Model: SentenceTransformers (all-MiniLM-L6-v2 to convert text into vector embeddings)
 
 Data Pipeline:
 
-PyMuPDF: For extracting raw text from the original PDF.
+- PyMuPDF: For extracting raw text from the original PDF.
 
-LangChain (Text-Splitters): For cleaning and splitting the text into uniform, overlapping chunks.
+- LangChain (Text-Splitters): For cleaning and splitting the text into uniform, overlapping chunks.
 
-Security & Environment: python-dotenv (for secure API key management outside of source control) and Git/GitHub.
+- Security & Environment: python-dotenv (for secure API key management outside of source control) and Git/GitHub.
 
 # Core Data Pipeline
 
 The application is powered by a 4-step data pipeline:
 
-Extract: Raw text is extracted from the Health-Case-Studies-....pdf using extract_all.py.
+- Extract: Raw text is extracted from the Health-Case-Studies-....pdf using extract_all.py.
 
-Chunk: The text is cleaned, and RecursiveCharacterTextSplitter is used to create over 150 small, 1000-character text chunks.
+- Chunk: The text is cleaned, and RecursiveCharacterTextSplitter is used to create over 150 small, 1000-character text chunks.
 
-Embed: Each text chunk is converted into a vector embedding and stored in a local ChromaDB database using embed_and_store.py.
+- Embed: Each text chunk is converted into a vector embedding and stored in a local ChromaDB database using embed_and_store.py.
 
 Retrieve & Generate (app.py):
 a.  The user's question is vectorized in real-time.
